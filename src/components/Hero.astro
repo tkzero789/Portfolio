@@ -1,40 +1,59 @@
 ---
-import HeroContent from "./HeroContent.astro";
+import { Image } from "astro:assets";
+import MyAvatar from "../assets/images/Avatar/my-avatar.gif";
 ---
 
-<div class="relative ">
+<section class="h-screen snap-start snap-always adjusted">
   <div
-    class="h-[100vh] items-center justify-center flex overflow-hidden px-8 sm:mt-0 -mt-12"
+    class="mx-auto flex h-full max-w-screen-xl items-center justify-center px-6"
   >
-    <div class="transition-all isolate -mt-16 sm:-mt-28">
-      <div
-      
-        class="absolute inset-x-0 -z-50 overflow-hidden blur-3xl "
-        aria-hidden="true"
-      >
-        <div
-          class="back animate-roam relative left-[calc(50%-11rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-[#e0e0e0] to-[#797979] opacity-10 sm:left-[calc(50%-30rem)] sm:w-[72.1875rem] "
-          style={{
-            clipPath:
-              "polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)",
-          }}
-        >
+    <div data-aos="fade-up" data-aos-duration="800">
+      <!-- Intro -->
+      <div class="text-center">
+        <div class="flex h-40 w-full justify-center pb-6 es:h-28 es:pb-3">
+          <Image
+            class="circle-clip h-full w-[136px] bg-white es:w-[100px]"
+            src={MyAvatar}
+            alt="avatar"
+            loading="eager"
+          />
         </div>
+        <h1
+          class="pb-6 text-2xl font-medium text-primary es:pb-3 es:text-xl lg:pb-8"
+        >
+          Hi, I&apos;m Thinh Tran
+        </h1>
+        <h1
+          class="from bg-gradient-to-r from-[#42b0fa] from-25% via-[#bd35fc] via-50% to-[#f7754e] to-75% bg-clip-text pb-6 text-3xl font-bold text-primary text-transparent es:pb-3 es:text-2xl lg:pb-8 lg:text-5xl"
+        >
+          Frontend Developer
+        </h1>
+        <p
+          class="pb-16 font-medium text-gray-400 es:pb-8 es:text-sm md:px-36 lg:px-80 lg:pb-20"
+        >
+          I bridge the gap between design vision and functional interfaces,
+          building dynamic and responsive web experiences.
+        </p>
       </div>
-      <HeroContent />
-      <div
-        class="absolute inset-x-0 top-[calc(100%-13rem)] -z-50 overflow-hidden blur-3xl sm:top-[calc(100%-30rem)] "
-        aria-hidden="true"
-      >
-        <div
-          class="animate-roam1 relative left-[calc(50%+3rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 bg-gradient-to-tr from-[#e0e0e0] to-[#797979] opacity-10 sm:left-[calc(50%+36rem)] sm:w-[72.1875rem]"
-          style={{
-            clipPath:
-              "polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)",
-          }}
+      <!-- Button -->
+      <div class="h-full py-3 text-center es:py-2">
+        <a
+          href="https://github.com/tkzero789"
+          class="mr-1 cursor-pointer rounded-full bg-white px-5 py-3 text-secondary hover:bg-slate-200 es:px-2 es:py-2"
+          >Get in touch</a
         >
-        </div>
+        <a
+          href="/"
+          class="ml-1 cursor-pointer rounded-full border px-5 py-3 text-primary hover:bg-gray-700 es:px-2 es:py-2"
+          >My resume</a
+        >
       </div>
     </div>
   </div>
-</div>
+</section>
+
+<style>
+  .circle-clip {
+    clip-path: circle(50% at 50% 50%);
+  }
+</style>

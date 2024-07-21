@@ -2,14 +2,26 @@
 module.exports = {
   content: ["./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}"],
   theme: {
+    screens: {
+      es: { max: "375px" },
+      md: "768px",
+      lg: "1024px",
+      xl: "1280px",
+    },
     extend: {
+      transitionProperty: {
+        bg: "background-color",
+      },
       colors: {
         primary: "#d1d5db",
+        secondary: "#272724",
+        "blur-header": "hsla(45, 17%, 95%, 0.6)",
+        "gray-1": "hsl(60 4% 18% / 1)",
+        "gray-2": "hsl(60 4% 22% / 1)",
       },
       animation: {
         text: "text 5s ease infinite",
-        roam: "roam 20s infinite ease-in-out alternate",
-        roam1: "roam 10s infinite ease-in-out alternate",
+        rotate: "rotate 1s ease-in-out",
       },
       keyframes: {
         text: {
@@ -22,20 +34,12 @@ module.exports = {
             "background-position": "right center",
           },
         },
-        roam: {
+        rotate: {
           "0%": {
-            transform: "rotate(0deg)  translateX(-600px) translateY(-60px);",
+            transform: "rotate(0)",
           },
           "100%": {
-            transform: "rotate(360deg)  translateX(400px) translateY(600px);",
-          },
-        },
-        roam1: {
-          "0%": {
-            transform: "rotate(0deg)  translateX(-900px) translateY(-20px);",
-          },
-          "100%": {
-            transform: "rotate(360deg)  translateX(20px);",
+            transform: "rotate(360deg)",
           },
         },
       },

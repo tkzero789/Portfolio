@@ -1,0 +1,65 @@
+---
+import { Image } from "astro:assets";
+import ContactAvatar from "../assets/images/Avatar/my-avatar-2.gif";
+---
+
+<section id="contact" class="adjusted h-screen snap-start snap-always">
+  <div
+    class="mx-auto flex h-full max-w-screen-xl flex-col items-center justify-center px-6 lg:mb-0 lg:mt-0"
+    data-aos="fade-up"
+    data-aos-anchor-placement="center-bottom"
+    data-aos-duration="800"
+  >
+    <div
+      class="w-5/6 rounded-2xl bg-gray-1 px-4 py-8 shadow-lg es:py-4 lg:px-12"
+    >
+      <h1
+        class="bg-gradient-to-b from-orange-400 to-amber-700 bg-clip-text pb-4 text-center text-3xl font-bold text-transparent es:text-2xl"
+      >
+        Get in touch
+      </h1>
+      <div class="lg:flex">
+        <div class="lg:w-1/2">
+          <p class="px-2 pb-4 text-primary es:text-sm lg:w-4/5 lg:px-0">
+            Driven to design interfaces that are intuitive and effortless to
+            use. Excited to contribute my skills to your team.
+          </p>
+          <p class="px-2 pb-1 text-primary es:text-xs lg:px-0">
+            Email: <a
+              href="mailto:thinhtran0061@gmail.com"
+              class="font-extralight underline">thinhtran0061@gmail.com</a
+            >
+          </p>
+          <p class="px-2 text-primary es:text-xs lg:px-0">
+            Other platforms: <a
+              target="_blank"
+              href="https://www.linkedin.com/in/thinh-tran-a2a8351a2/"
+              class="font-extralight underline">Linkedin</a
+            >&nbsp;
+            <a
+              target="_blank"
+              href="https://github.com/"
+              class="font-extralight underline">Github</a
+            >
+          </p>
+        </div>
+        <div
+          class="flex h-40 w-full items-center justify-center pt-8 es:h-32 lg:w-1/2 lg:pt-0"
+        >
+          <Image
+            class="circle-clip h-full w-[128px] bg-white es:w-[96px] lg:w-[160px]"
+            src={ContactAvatar}
+            alt="contact-avatar"
+            loading="lazy"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .circle-clip {
+    clip-path: circle(50% at 50% 50%);
+  }
+</style>

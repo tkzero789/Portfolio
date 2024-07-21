@@ -1,0 +1,116 @@
+---
+import { Image } from "astro:assets";
+import { getData } from "../utils/projects";
+const data = getData();
+---
+
+<section id="projects" class="adjusted snap-start snap-always lg:h-screen">
+  <div
+    class="mx-auto mt-32 flex h-full max-w-screen-xl flex-col items-center justify-center px-6 lg:mt-0"
+  >
+    <!-- Heading -->
+    <h1
+      class="bg-gradient-to-b from-purple-400 to-fuchsia-700 bg-clip-text pb-4 text-center text-3xl font-bold text-transparent es:text-2xl lg:pb-8"
+    >
+      Projects
+    </h1>
+    <!-- Three projects -->
+    <div class="w-4/5 md:w-4/5 lg:flex lg:h-auto lg:w-full lg:gap-x-6">
+      {
+        data &&
+          data.slice(0, 3).map((item, index) => {
+            return (
+              <div
+                class={`flex flex-col lg:h-auto lg:flex-row lg:gap-x-10 lg:gap-y-0 ${index !== 0 ? "mt-6 lg:mt-0" : ""}`}
+                data-aos="fade-up"
+                data-aos-anchor-placement="center-bottom"
+                data-aos-duration="800"
+              >
+                <a
+                  href={`${item.url}`}
+                  target="_blank"
+                  class={`group flex flex-col rounded-3xl ${index !== 0 ? "mt-auto lg:mt-0" : ""} h-fit bg-gray-1 p-4 shadow-lg transition-bg duration-500 hover:bg-gray-2 md:p-6`}
+                >
+                  {/* Image */}
+                  <div class="h-full w-full lg:h-1/2">
+                    <Image
+                      src={item.image}
+                      class="h-full w-full rounded-2xl bg-cover object-cover"
+                      alt="project"
+                      transition:name={item.name}
+                      loading="lazy"
+                    />
+                  </div>
+                  {/* Text */}
+                  <div class="pt-4 lg:block lg:h-auto lg:w-full lg:rounded-b-xl lg:rounded-t-none lg:pt-6">
+                    <div class="flex h-full flex-row-reverse justify-end px-0">
+                      <div class="pl-4">
+                        <h1 class="text-lg font-bold text-white es:text-base es:font-semibold lg:text-xl">
+                          {item.name}
+                        </h1>
+                        <p class="text-sm text-white text-opacity-80 es:text-xs">
+                          {item.type}
+                        </p>
+                      </div>
+                      {/* Button */}
+                      <div
+                        aria-label={item.name}
+                        class="self-end rounded-full bg-primary bg-opacity-10 p-2"
+                      >
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          class="lucide lucide-move-up-right h-6 text-primary group-hover:animate-rotate"
+                        >
+                          <>
+                            <path d="M13 5H19V11" />
+                            <path d="M19 5L5 19" />
+                          </>
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+              </div>
+            );
+          })
+      }
+    </div>
+    <!-- Button link -->
+    <div
+      class="pt-8 text-center lg:pt-20"
+      data-aos="fade-up"
+      data-aos-anchor-placement="center-bottom"
+      data-aos-duration="800"
+    >
+      <a
+        href="/projects"
+        class="inline-block cursor-pointer rounded-full border px-5 py-3 text-primary hover:bg-gray-700 es:py-2"
+        >View all</a
+      >
+    </div>
+  </div>
+</section>
+<style>
+  @media screen and (max-width: 768px) {
+    .adjusted:target::before {
+      content: "";
+      display: block;
+      height: 1px;
+      visibility: hidden;
+    }
+  }
+  @media screen and (max-width: 375px) {
+    .adjusted:target::before {
+      content: "";
+      display: block;
+      height: 1px;
+      visibility: hidden;
+    }
+  }
+</style>
