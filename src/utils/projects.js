@@ -31,7 +31,14 @@ const data = [
     slug: "dime",
     description:
       "Budgeting app helps users manage their finances effortlessly. Track spending, set goals, and get personalized financial tips from an AI assistant to improve money management skills.",
-    tech: ["NextJs", "OpenAI", "ClerkJS", "Neon", "Tailwind CSS", "shadcn"],
+    tech: [
+      "Next.js",
+      "Clerk.js",
+      "Neon",
+      "OpenAI",
+      "Tailwind CSS",
+      "shadcn/ui",
+    ],
   },
   {
     name: "PocketSky",
