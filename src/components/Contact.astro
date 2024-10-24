@@ -47,15 +47,35 @@ import ContactAvatar from "../assets/images/Avatar/my-avatar-2.gif";
           class="flex h-40 w-full items-center justify-center pt-8 es:h-32 lg:w-1/2 lg:pt-0"
         >
           <Image
+            id="contact-avatar"
             class="circle-clip h-full w-[128px] bg-white es:w-[96px] lg:w-[160px]"
             src={ContactAvatar}
-            alt="contact-avatar"
+            alt="contact avatar"
             loading="lazy"
           />
         </div>
       </div>
     </div>
   </div>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const avatar = document.getElementById("contact-avatar");
+      let observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            if (avatar) {
+              (avatar as HTMLImageElement).src = (
+                avatar as HTMLImageElement
+              ).src; // Force reload the GIF
+            }
+          }
+        });
+      });
+      if (avatar) {
+        observer.observe(avatar);
+      }
+    });
+  </script>
 </section>
 
 <style>

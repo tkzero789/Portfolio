@@ -12,6 +12,7 @@ import MyAvatar from "../assets/images/Avatar/my-avatar.gif";
       <div class="text-center">
         <div class="flex h-40 w-full justify-center pb-6 es:h-28 es:pb-3">
           <Image
+            id="my-avatar"
             class="circle-clip h-full w-[136px] bg-white es:w-[100px]"
             src={MyAvatar}
             alt="avatar"
@@ -50,6 +51,25 @@ import MyAvatar from "../assets/images/Avatar/my-avatar.gif";
       </div>
     </div>
   </div>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const avatar = document.getElementById("my-avatar");
+      let observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            if (avatar) {
+              (avatar as HTMLImageElement).src = (
+                avatar as HTMLImageElement
+              ).src; // Force reload the GIF
+            }
+          }
+        });
+      });
+      if (avatar) {
+        observer.observe(avatar);
+      }
+    });
+  </script>
 </section>
 
 <style>
