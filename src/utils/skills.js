@@ -4,7 +4,7 @@ const data = [
     tech: [
       "HTML",
       "CSS",
-      "SCSS",
+      "Sass",
       "Tailwind CSS",
       "Javascript",
       "React",
@@ -15,7 +15,7 @@ const data = [
 
   {
     heading: "Back-end",
-    tech: ["Node.js", "Express.js", "MongoDB", "PostgreSQL"],
+    tech: ["Node.js", "Express.js", "MongoDB", "PostgreSQL", "MySQL", "AWS S3"],
   },
   {
     heading: "Tools",
