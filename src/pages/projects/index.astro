@@ -16,7 +16,7 @@ const data = getData();
         List of projects
       </h1>
       <!-- List -->
-      <div class="mt-10 w-full">
+      <div class="mb-20 mt-10 flex w-full flex-col gap-8">
         {
           data?.map((item, index) => {
             return (
@@ -24,16 +24,18 @@ const data = getData();
                 <div
                   data-aos="fade-up"
                   data-aos-anchor-placement="center-bottom"
-                  class="flex flex-col gap-4 md:items-center"
+                  class="flex flex-col gap-4 rounded-3xl bg-gray-1 px-6 py-6 shadow-lg md:px-10 md:py-10 lg:flex-row-reverse lg:items-center lg:px-12 lg:py-6"
                 >
-                  <Image
-                    class:list="w-3/4 md:w-3/5 rounded-md border-2 border-primary border-opacity-5 lg:rounded-lg"
-                    src={item.image}
-                    alt={item.name}
-                    transition:name={item.name}
-                  />
-                  <div class="flex flex-col md:items-center">
-                    <div class="flex flex-col md:items-center">
+                  <div class="py-0 lg:w-3/5 lg:py-8">
+                    <Image
+                      class:list="w-full h-full rounded-md lg:rounded-3xl"
+                      src={item.image}
+                      alt={item.name}
+                      transition:name={item.name}
+                    />
+                  </div>
+                  <div class="flex flex-col lg:w-2/5">
+                    <div class="flex flex-col">
                       <a
                         target="_blank"
                         href={item.url}
@@ -58,7 +60,7 @@ const data = getData();
                           </>
                         </svg>
                       </a>
-                      <p class="mt-2 text-sm text-gray-400 md:w-3/5 md:text-center lg:text-base">
+                      <p class="mt-2 text-sm text-gray-400 lg:text-base">
                         {item.description}
                       </p>
                     </div>
@@ -71,23 +73,60 @@ const data = getData();
                         );
                       })}
                     </div>
-                    <div class="mt-5 flex gap-3 text-primary">
+                    {/* Buttons */}
+                    <div class="mt-6 flex gap-3 text-primary es:flex-col">
                       <a
-                        href={item.github}
-                        class="inline-block w-fit rounded-full border px-4 py-2 text-primary hover:bg-gray-700"
+                        target="_blank"
+                        href={item.url}
+                        class="flex w-fit items-center justify-center gap-2 rounded-full border px-2 py-2 text-sm text-primary hover:bg-gray-700 es:w-full md:px-4"
                       >
-                        Github
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="24"
+                          height="24"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="1.5"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          class="lucide lucide-link-2"
+                        >
+                          <>
+                            <path d="M9 17H7A5 5 0 0 1 7 7h2" />
+                            <path d="M15 7h2a5 5 0 1 1 0 10h-2" />
+                            <line x1="8" x2="16" y1="12" y2="12" />
+                          </>
+                        </svg>
+                        Visit Website
                       </a>
                       <a
                         href=""
-                        class="inline-block w-fit rounded-full border bg-white px-4 py-2 text-secondary hover:bg-slate-200"
+                        class="flex w-fit items-center justify-center gap-2 rounded-full border bg-white px-2 py-2 text-sm text-secondary hover:bg-slate-200 es:w-full md:px-4"
                       >
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="24"
+                          height="24"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="1.5"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          class="lucide lucide-log-in"
+                        >
+                          <>
+                            <path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4" />
+                            <polyline points="10 17 15 12 10 7" />
+                            <line x1="15" x2="3" y1="12" y2="12" />
+                          </>
+                        </svg>
                         Project Insight
                       </a>
                     </div>
                   </div>
                 </div>
-                <hr class="mb-8 mt-8 opacity-10" />
               </>
             );
           })

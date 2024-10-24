@@ -3,11 +3,11 @@ import { Image } from "astro:assets";
 import MyAvatar from "../assets/images/Avatar/my-avatar.gif";
 ---
 
-<section class="h-screen snap-start snap-always adjusted">
+<section class="adjusted h-screen snap-start snap-always">
   <div
     class="mx-auto flex h-full max-w-screen-xl items-center justify-center px-6"
   >
-    <div data-aos="fade-up" data-aos-duration="800">
+    <div class="fade-in">
       <!-- Intro -->
       <div class="text-center">
         <div class="flex h-40 w-full justify-center pb-6 es:h-28 es:pb-3">
@@ -55,5 +55,17 @@ import MyAvatar from "../assets/images/Avatar/my-avatar.gif";
 <style>
   .circle-clip {
     clip-path: circle(50% at 50% 50%);
+  }
+  .fade-in {
+    animation: fadeIn 1s ease-in-out;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
   }
 </style>

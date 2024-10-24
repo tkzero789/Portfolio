@@ -34,15 +34,18 @@
     "astro-seo": "^0.8.3",
     "astro-tunnel": "^0.1.6",
     "axios": "^1.6.8",
+    "framer-motion": "^11.11.9",
     "mdast-util-to-string": "^4.0.0",
     "nanostores": "^0.10.3",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-hot-toast": "^2.4.1",
+    "react-use-measure": "^2.1.1",
     "reading-time": "^1.5.0",
     "remark-collapse": "^0.1.2",
     "remark-math": "^6.0.0",
-    "remark-toc": "^9.0.0"
+    "remark-toc": "^9.0.0",
+    "tailwind-merge": "^2.5.4"
   },
   "overrides": {
     "sharp": "0.33.3"

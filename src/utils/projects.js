@@ -1,6 +1,6 @@
-import placeHolder from "../assets/images/placeholder.webp";
 import PocketSKy from "../assets/images/PocketSky/pocketsky-project.webp";
 import BaySide from "../assets/images/Bayside/bayside-project.webp";
+import Dime from "../assets/images/Dime/dime-project.webp";
 
 const data = [
   {
@@ -23,15 +23,15 @@ const data = [
     ],
   },
   {
-    name: "Issuefy",
+    name: "Dime",
     type: "Website",
-    url: "https://lifeinsureease.in/",
-    github: "https://github.com/DevRohit06/insurance-website",
-    image: PocketSKy,
-    slug: "lifeinsureease",
+    url: "https://dime-mu.vercel.app/",
+    github: "https://github.com/tkzero789/dime",
+    image: Dime,
+    slug: "dime",
     description:
-      "This is an Insurance website made using Astro, Reactjs and Tailwind css. ",
-    tech: ["HTML", "Javascript", "Css", "Tailwind css", "Astro", "Reactjs"],
+      "Budgeting app helps users manage their finances effortlessly. Track spending, set goals, and get personalized financial tips from an AI assistant to improve money management skills.",
+    tech: ["NextJs", "OpenAI", "ClerkJS", "Neon", "Tailwind CSS", "shadcn"],
   },
   {
     name: "PocketSky",
@@ -43,16 +43,6 @@ const data = [
     description:
       "A simple weather app with search features, unit conversion, and essential forecast information.",
     tech: ["HTML", "CSS", "Javascript"],
-  },
-  {
-    name: "DocAid",
-    type: "Website",
-    url: "https://doc-aid.vercel.app/",
-    github: "https://github.com/DevRohit06/DocAid",
-    image: placeHolder,
-    slug: "docaid",
-    description: "Website template for Health related businesses",
-    tech: ["HTML", "Javascript", "CSS", "Tailwind css", "ReactJS"],
   },
 ];
 
