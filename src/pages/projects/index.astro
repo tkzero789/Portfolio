@@ -2,13 +2,11 @@
 import { Image } from "astro:assets";
 import { getData } from "../../utils/projects";
 import Layout from "../../layouts/Layout.astro";
-import Header from "../../components/Header.astro";
 const data = getData();
 ---
 
 <Layout title="Projects">
   <main transition:persist>
-    <Header />
     <div class="mx-auto max-w-screen-xl px-6 pt-28">
       <h1
         class="bg-gradient-to-b from-zinc-200 to-neutral-500 bg-clip-text text-start text-3xl font-bold text-transparent md:text-center"
@@ -16,22 +14,19 @@ const data = getData();
         List of projects
       </h1>
       <!-- List -->
-      <div class="mb-20 mt-10 flex w-full flex-col gap-8">
+      <div class="fade-up mb-20 mt-10 flex w-full flex-col gap-8">
         {
           data?.map((item, index) => {
             return (
               <>
-                <div
-                  data-aos="fade-up"
-                  data-aos-anchor-placement="center-bottom"
-                  class="flex flex-col gap-4 rounded-3xl bg-gray-1 px-6 py-6 shadow-lg md:px-10 md:py-10 lg:flex-row-reverse lg:items-center lg:px-12 lg:py-6"
-                >
+                <div class="flex flex-col gap-4 rounded-3xl bg-gray-1 px-6 py-6 shadow-lg md:px-10 md:py-10 lg:flex-row-reverse lg:items-center lg:px-12 lg:py-6">
                   <div class="py-0 lg:w-3/5 lg:py-8">
                     <Image
-                      class:list="w-full h-full rounded-md lg:rounded-3xl"
+                      class:list="w-full h-full rounded-md lg:rounded-3xl border-primary border border-opacity-5"
                       src={item.image}
                       alt={item.name}
                       transition:name={item.name}
+                      loading="eager"
                     />
                   </div>
                   <div class="flex flex-col lg:w-2/5">
@@ -39,9 +34,9 @@ const data = getData();
                       <a
                         target="_blank"
                         href={item.url}
-                        class="flex w-fit items-center text-xl font-semibold text-primary hover:underline lg:text-2xl"
+                        class="flex w-fit items-center text-xl font-bold text-primary hover:underline lg:text-2xl"
                       >
-                        <span class="pr-1">{item.name}</span>
+                        <h1 class="pr-1">{item.name}</h1>
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
                           width="20"
@@ -101,7 +96,7 @@ const data = getData();
                         Visit Website
                       </a>
                       <a
-                        href=""
+                        href={item.href}
                         class="flex w-fit items-center justify-center gap-2 rounded-full border bg-white px-2 py-2 text-sm text-secondary hover:bg-slate-200 es:w-full md:px-4"
                       >
                         <svg
@@ -134,4 +129,20 @@ const data = getData();
       </div>
     </div>
   </main>
+  <style>
+    .fade-up {
+      animation: fadeUp 0.3s ease-in-out;
+    }
+
+    @keyframes fadeUp {
+      from {
+        opacity: 0;
+        transform: translateY(50px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
 </Layout>

@@ -1,0 +1,612 @@
+---
+import { Image } from "astro:assets";
+import Layout from "../../../layouts/Layout.astro";
+import BaySide from "../../../assets/images/Bayside/bayside-project.webp";
+import BaySideHome from "../../../assets/images/Bayside/bayside-screenshot-home.webp";
+import BaySideRequest from "../../../assets/images/Bayside/bayside-screenshot-request.webp";
+import BaySideCheck1 from "../../../assets/images/Bayside/bayside-screenshot-healthcheck-1.webp";
+import BaySideCheck2 from "../../../assets/images/Bayside/bayside-screenshot-healthcheck-2.webp";
+import BaySideCheck3 from "../../../assets/images/Bayside/bayside-screenshot-healthcheck-3.webp";
+import BaySideNews from "../../../assets/images/Bayside/bayside-screenshot-news.webp";
+import BaySideNewsDetail from "../../../assets/images/Bayside/bayside-screenshot-news-detail.webp";
+import BaySideSymptoms from "../../../assets/images/Bayside/bayside-screenshot-symptoms.webp";
+import BaySideDisease from "../../../assets/images/Bayside/bayside-screenshot-disease.webp";
+import BaySideBlog from "../../../assets/images/Bayside/bayside-screenshot-blog.webp";
+---
+
+<Layout title="BaySide">
+  <main transition:persist>
+    <div class="mx-auto max-w-screen-xl px-6 pt-28">
+      <!-- Breadcrumb -->
+      <nav aria-label="breadcrumb">
+        <ul class="flex items-center gap-2 text-sm text-primary">
+          <li>
+            <a href="/">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-house hover:stroke-[1.5]"
+              >
+                <title>Home</title>
+                <path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8"
+                ></path><path
+                  d="M3 10a2 2 0 0 1 .709-1.528l7-5.999a2 2 0 0 1 2.582 0l7 5.999A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"
+                ></path></svg
+              >
+            </a>
+          </li>
+          <li>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="14"
+              height="14"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="lucide lucide-slash"><path d="M22 2 2 22"></path></svg
+            >
+          </li>
+          <li><a href="/projects" class="hover:underline">Projects</a></li>
+          <li>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="14"
+              height="14"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="lucide lucide-slash"><path d="M22 2 2 22"></path></svg
+            >
+          </li>
+          <li class="font-semibold">BaySide Hospital</li>
+        </ul>
+      </nav>
+      <div
+        class="fade-in mb-20 mt-10 rounded-3xl bg-transparent px-0 py-0 md:bg-gray-1 md:px-10 md:py-10 md:shadow-lg lg:px-12 lg:pb-12 lg:pt-6"
+      >
+        <div class="flex flex-col gap-4 lg:flex-row-reverse lg:items-center">
+          <!-- Main card info -->
+          <div class="py-0 lg:w-3/5 lg:py-8">
+            <Image
+              class:list="w-full h-full rounded-md lg:rounded-3xl border-primary border border-opacity-5"
+              src={BaySide}
+              alt="BaySide Hospital"
+              transition:name="BaySide Hospital"
+              loading="eager"
+            />
+          </div>
+          <div class="flex flex-col lg:w-2/5">
+            <div class="flex flex-col">
+              <a
+                target="_blank"
+                href="https://bayside-hospital.onrender.com/home"
+                class="flex w-fit items-center text-xl font-bold text-primary hover:underline lg:text-2xl"
+              >
+                <h1 class="pr-1">BaySide Hospital</h1>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="lucide lucide-arrow-up-right"
+                >
+                  <>
+                    <path d="M7 7h10v10"></path>
+                    <path d="M7 17 17 7"></path>
+                  </>
+                </svg>
+              </a>
+              <p class="mt-2 text-sm text-gray-400 lg:text-base">
+                This website streamlines healthcare by offering appointment
+                scheduling, a symptom checker, health news blog, and an admin
+                dashboard for hospital management.
+              </p>
+            </div>
+            <div class="mt-3 flex flex-wrap gap-1 lg:mt-4 lg:gap-2">
+              <span
+                class="rounded-full bg-primary bg-opacity-15 px-3 py-1 text-xs text-primary lg:text-sm"
+              >
+                React
+              </span>
+              <span
+                class="rounded-full bg-primary bg-opacity-15 px-3 py-1 text-xs text-primary lg:text-sm"
+              >
+                Node.js
+              </span>
+              <span
+                class="rounded-full bg-primary bg-opacity-15 px-3 py-1 text-xs text-primary lg:text-sm"
+              >
+                Express.js
+              </span>
+              <span
+                class="rounded-full bg-primary bg-opacity-15 px-3 py-1 text-xs text-primary lg:text-sm"
+              >
+                MongoDB
+              </span>
+              <span
+                class="rounded-full bg-primary bg-opacity-15 px-3 py-1 text-xs text-primary lg:text-sm"
+              >
+                Sass
+              </span>
+              <span
+                class="rounded-full bg-primary bg-opacity-15 px-3 py-1 text-xs text-primary lg:text-sm"
+              >
+                Bootstrap
+              </span>
+              <span
+                class="rounded-full bg-primary bg-opacity-15 px-3 py-1 text-xs text-primary lg:text-sm"
+              >
+                MUI
+              </span>
+            </div>
+            {/* Buttons */}
+            <div class="mt-6 flex gap-3 text-primary es:flex-col">
+              <a
+                target="_blank"
+                href="https://bayside-hospital.onrender.com/home"
+                class="flex w-fit items-center justify-center gap-2 rounded-full border px-2 py-2 text-sm text-primary hover:bg-gray-700 es:w-full md:px-4"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="lucide lucide-link-2"
+                >
+                  <>
+                    <path d="M9 17H7A5 5 0 0 1 7 7h2"></path>
+                    <path d="M15 7h2a5 5 0 1 1 0 10h-2"></path>
+                    <line x1="8" x2="16" y1="12" y2="12"></line>
+                  </>
+                </svg>
+                Visit Website
+              </a>
+              <a
+                target="_blank"
+                href="https://github.com/tkzero789/Hospital"
+                class="flex w-fit items-center justify-center gap-2 rounded-full border bg-white px-2 py-2 text-sm text-secondary hover:bg-slate-200 es:w-full md:px-4"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="lucide lucide-github"
+                  ><path
+                    d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"
+                  ></path><path d="M9 18c-4.51 2-5-2-7-2"></path></svg
+                >
+                Github
+              </a>
+            </div>
+          </div>
+        </div>
+        <!-- Key features -->
+        <div
+          class="mt-6 flex w-full flex-col gap-4 text-primary lg:mt-3 lg:w-9/12"
+        >
+          <h2 class="text-lg font-bold">Key Features:</h2>
+          <div class="grid grid-cols-1 gap-y-4 md:grid-cols-2">
+            <!-- Feature item -->
+            <div class="flex gap-2">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-key-round"
+                ><path
+                  d="M2.586 17.414A2 2 0 0 0 2 18.828V21a1 1 0 0 0 1 1h3a1 1 0 0 0 1-1v-1a1 1 0 0 1 1-1h1a1 1 0 0 0 1-1v-1a1 1 0 0 1 1-1h.172a2 2 0 0 0 1.414-.586l.814-.814a6.5 6.5 0 1 0-4-4z"
+                ></path><circle cx="16.5" cy="7.5" r=".5" fill="currentColor"
+                ></circle></svg
+              >
+              <div>
+                <h3 class="font-semibold">Role-Based Authentication</h3>
+                <p class="text-sm text-gray-400">
+                  Secure access for staff and patients
+                </p>
+              </div>
+            </div>
+            <!-- Feature item -->
+            <div class="flex gap-2">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-user-check"
+                ><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"
+                ></path><circle cx="9" cy="7" r="4"></circle><polyline
+                  points="16 11 18 13 22 9"></polyline></svg
+              >
+              <div>
+                <h3 class="font-semibold">Symptom Analysis</h3>
+                <p class="text-sm text-gray-400">
+                  Matches symptoms with conditions
+                </p>
+              </div>
+            </div>
+            <!-- Feature item -->
+            <div class="flex gap-2">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-calendar-search"
+                ><path d="M16 2v4"></path><path
+                  d="M21 11.75V6a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h7.25"
+                ></path><path d="m22 22-1.875-1.875"></path><path d="M3 10h18"
+                ></path><path d="M8 2v4"></path><circle cx="18" cy="18" r="3"
+                ></circle></svg
+              >
+              <div>
+                <h3 class="font-semibold">Appointment Management</h3>
+                <p class="text-sm text-gray-400">
+                  Real-time scheduling and tracking
+                </p>
+              </div>
+            </div>
+            <!-- Feature item -->
+            <div class="flex gap-2">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-layout-dashboard"
+                ><rect width="7" height="9" x="3" y="3" rx="1"></rect><rect
+                  width="7"
+                  height="5"
+                  x="14"
+                  y="3"
+                  rx="1"></rect><rect width="7" height="9" x="14" y="12" rx="1"
+                ></rect><rect width="7" height="5" x="3" y="16" rx="1"
+                ></rect></svg
+              >
+              <div>
+                <h3 class="font-semibold">Doctor Content Management</h3>
+                <p class="text-sm text-gray-400">
+                  Publish and manage medical articles
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- About -->
+        <div class="mt-8 flex flex-col gap-4 text-primary">
+          <h2 class="text-lg font-bold">About:</h2>
+          <p class="text-sm font-light lg:text-base">
+            BaySide Hospital is a personal project showcasing a comprehensive
+            healthcare platform designed to enhance patient care and
+            accessibility. The website offers a range of features to support our
+            community's health and well-being:
+          </p>
+          <ul
+            class="flex list-inside list-disc flex-col gap-2 pl-0 text-sm font-light md:pl-8 lg:text-base"
+          >
+            <li>
+              <span class="font-semibold">Appointment Scheduling:</span> users can
+              easily request and manage medical appointments online.
+            </li>
+            <li>
+              <span class="font-semibold">Symptom Checker:</span> this feature helps
+              users make informed decisions about seeking medical care.
+            </li>
+            <li>
+              <span class="font-semibold">News/Health Articles:</span> stay informed
+              about various medical topics, preventive care, and health tips through
+              articles written by doctors.
+            </li>
+          </ul>
+        </div>
+        <!-- Techstack -->
+        <div class="mt-8 flex flex-col gap-4 text-primary">
+          <h2 class="text-lg font-bold">Techstack:</h2>
+          <p class="text-sm font-light lg:text-base">
+            Here's an overview of the key technologies powering my project:
+          </p>
+          <ul
+            class="flex list-inside list-disc flex-col gap-2 pl-0 text-sm font-light md:pl-8 lg:text-base"
+          >
+            <li>
+              <span class="font-semibold">Corestack</span>: React, Node.js,
+              Express.js, MongoDB.
+            </li>
+            <li>
+              <span class="font-semibold">Styling</span>: Sass, Bootstrap, MUI.
+            </li>
+            <li>
+              <span class="font-semibold">Authentication</span>: JSON Web Tokens
+              (JWT).
+            </li>
+            <li>
+              <span class="font-semibold">Cloud Services and APIs</span>: Amazon
+              S3, Google Maps API.
+            </li>
+          </ul>
+        </div>
+        <!-- User Roles and Permissions -->
+        <div class="mt-8 flex flex-col gap-4 text-primary">
+          <h2 class="text-lg font-bold">User Roles and Permissions:</h2>
+          <p class="text-sm font-light lg:text-base">
+            List of demo accounts that allow you to experience the system from
+            different user perspectives:
+          </p>
+          <!-- Table for lg screen and above -->
+          <table
+            class="hidden border-separate border-spacing-0 rounded-xl border lg:table"
+          >
+            <thead class="bg-stone-800">
+              <tr>
+                <th scope="col" class="rounded-tl-xl border-r py-2">Account</th>
+                <th scope="col" class="border-r py-2">Admin</th>
+                <th scope="col" class="border-r py-2">Head Doctor</th>
+                <th scope="col" class="rounded-tr-xl py-2">Doctor</th>
+              </tr>
+            </thead>
+            <tbody class="bg-stone-700">
+              <tr class="text-center">
+                <th scope="col" class="border border-l-0 py-2 font-normal"
+                  >Username</th
+                >
+                <td class="border border-l-0 py-2 text-sm"
+                  >admindemo@gmail.com</td
+                >
+                <td class="border border-l-0 py-2 text-sm"
+                  >hdoctordemo@gmail.com</td
+                >
+                <td class="border border-l-0 border-r-0 py-2 text-sm"
+                  >doctordemo@gmail.com</td
+                >
+              </tr>
+              <tr class="text-center">
+                <th scope="col" class="rounded-bl-xl border-r py-2 font-normal"
+                  >Password</th
+                >
+                <td class="border-r py-2 text-sm">admindemo987</td>
+                <td class="border-r py-2 text-sm">hdoctordemo654</td>
+                <td class="rounded-br-xl py-2 text-sm">doctordemo321</td>
+              </tr>
+            </tbody>
+          </table>
+          <!-- Mobile alternative -->
+          <a
+            href="https://github.com/tkzero789/Hospital"
+            class="underline lg:hidden">List of accounts</a
+          >
+          <!-- Roles -->
+          <ul
+            class="flex list-inside list-disc flex-col gap-2 pl-0 text-sm font-light md:pl-8 lg:text-base"
+          >
+            <li class="font-semibold">
+              Admin
+              <ul
+                class="mt-2 flex list-inside list-[circle] flex-col gap-2 pl-8 text-sm font-light lg:text-base"
+              >
+                <li>Manage all user accounts (create, modify, delete)</li>
+                <li>
+                  Review, approve, request changes, or delete content created by
+                  doctors and head doctors.
+                </li>
+                <li>Generate and view comprehensive reports</li>
+              </ul>
+            </li>
+            <li class="font-semibold">
+              Head Doctor
+              <ul
+                class="mt-2 flex list-inside list-[circle] flex-col gap-2 pl-8 text-sm font-light lg:text-base"
+              >
+                <li>
+                  Create and edit content for the symptom checker tool,
+                  including:
+                  <ul
+                    class="mt-2 flex list-inside list-[square] flex-col gap-2 pl-8 text-sm font-light lg:text-base"
+                  >
+                    <li>Symptoms</li>
+                    <li>Diseases</li>
+                    <li>Articles related to medical conditions</li>
+                  </ul>
+                </li>
+                <li>
+                  Create and publish blog posts for the News & Insights page
+                </li>
+              </ul>
+            </li>
+            <li class="font-semibold">
+              Doctor<ul
+                class="mt-2 flex list-inside list-[circle] flex-col gap-2 pl-8 text-sm font-light lg:text-base"
+              >
+                <li>
+                  Create and publish blog posts for the News & Insights page
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+        <!-- Site Navigation -->
+        <div class="mt-8 flex flex-col gap-4 text-primary">
+          <h2 class="text-lg font-bold">Site Navigation:</h2>
+          <p class="text-sm font-light lg:text-base">
+            The following main navigation elements are interactive and will
+            direct users to specific pages or functionalities:
+          </p>
+          <ul
+            class="flex list-inside list-disc flex-col gap-2 pl-0 text-sm font-light md:pl-8 lg:text-base"
+          >
+            <li class="font-semibold">
+              Appointment dropdown
+              <ul
+                class="mt-2 flex list-inside list-[circle] flex-col gap-2 pl-8 text-sm font-light lg:text-base"
+              >
+                <li>
+                  <a
+                    target="_blank"
+                    href="https://bayside-hospital.onrender.com/appt-request"
+                    class="underline">Request appointment</a
+                  >
+                </li>
+                <li>
+                  <a
+                    target="_blank"
+                    href="https://bayside-hospital.onrender.com/appt-detail-guest"
+                    class="underline">Check appointment status</a
+                  >
+                </li>
+              </ul>
+            </li>
+            <li class="underline">
+              <a
+                target="_blank"
+                href="https://bayside-hospital.onrender.com/symptom-checker"
+                >Health Checker</a
+              >
+            </li>
+            <li class="underline">
+              <a
+                target="_blank"
+                href="https://bayside-hospital.onrender.com/signin-staff"
+                >Patient Portal</a
+              >
+            </li>
+            <li class="underline">
+              <a
+                target="_blank"
+                href="https://bayside-hospital.onrender.com/news/page-1"
+                >News & Insights</a
+              >
+            </li>
+          </ul>
+        </div>
+        <!-- App Screenshots -->
+        <div class="mt-8 flex flex-col gap-4 text-primary">
+          <h2 class="text-lg font-bold">App Screenshots:</h2>
+          <div class="grid grid-cols-1 gap-8 lg:grid-cols-2">
+            <Image
+              src={BaySideHome}
+              alt="Bayside Home"
+              class="rounded-3xl"
+              loading="lazy"
+            />
+            <Image
+              src={BaySideRequest}
+              alt="Bayside Request"
+              class="rounded-3xl"
+              loading="lazy"
+            />
+            <Image
+              src={BaySideCheck1}
+              alt="Bayside Health Check 1"
+              class="rounded-3xl"
+              loading="lazy"
+            />
+            <Image
+              src={BaySideCheck2}
+              alt="Bayside Health Check 2"
+              class="rounded-3xl"
+              loading="lazy"
+            />
+            <Image
+              src={BaySideCheck3}
+              alt="Bayside Health Check 3"
+              class="rounded-3xl"
+              loading="lazy"
+            />
+            <Image
+              src={BaySideNews}
+              alt="Bayside News"
+              class="rounded-3xl"
+              loading="lazy"
+            />
+            <Image
+              src={BaySideNewsDetail}
+              alt="Bayside News Detail"
+              class="rounded-3xl"
+              loading="lazy"
+            />
+            <Image
+              src={BaySideSymptoms}
+              alt="Bayside Symptoms"
+              class="rounded-3xl"
+              loading="lazy"
+            />
+            <Image
+              src={BaySideDisease}
+              alt="Bayside Disease"
+              class="rounded-3xl"
+              loading="lazy"
+            />
+            <Image
+              src={BaySideBlog}
+              alt="Bayside Blog"
+              class="rounded-3xl"
+              loading="lazy"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <style>
+    .fade-in {
+      animation: fadeIn 0.3s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+  </style>
+</Layout>

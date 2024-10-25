@@ -1,0 +1,424 @@
+---
+import { Image } from "astro:assets";
+import Layout from "../../../layouts/Layout.astro";
+import Dime from "../../../assets/images/Dime/dime-project.webp";
+import DimeDashboard from "../../../assets/images/Dime/dime-screenshot-dashboard.webp";
+import DimeBudgets from "../../../assets/images/Dime/dime-screenshot-budgets.webp";
+import DimeSpending from "../../../assets/images/Dime/dime-screenshot-spending.webp";
+import DimeTransaction from "../../../assets/images/Dime/dime-screenshot-transaction.webp";
+import DimeIncome from "../../../assets/images/Dime/dime-screenshot-income.webp";
+import DimePenny from "../../../assets/images/Dime/dime-screenshot-penny.webp";
+---
+
+<Layout title="BaySide">
+  <main transition:persist>
+    <div class="mx-auto max-w-screen-xl px-6 pt-28">
+      <!-- Breadcrumb -->
+      <nav aria-label="breadcrumb">
+        <ul class="flex items-center gap-2 text-sm text-primary">
+          <li>
+            <a href="/">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-house hover:stroke-[1.5]"
+              >
+                <title>Home</title>
+                <path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8"
+                ></path><path
+                  d="M3 10a2 2 0 0 1 .709-1.528l7-5.999a2 2 0 0 1 2.582 0l7 5.999A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"
+                ></path></svg
+              >
+            </a>
+          </li>
+          <li>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="14"
+              height="14"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="lucide lucide-slash"><path d="M22 2 2 22"></path></svg
+            >
+          </li>
+          <li><a href="/projects" class="hover:underline">Projects</a></li>
+          <li>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="14"
+              height="14"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="lucide lucide-slash"><path d="M22 2 2 22"></path></svg
+            >
+          </li>
+          <li class="font-semibold">Dime</li>
+        </ul>
+      </nav>
+      <div
+        class="fade-in mb-20 mt-10 rounded-3xl bg-transparent px-0 py-0 md:bg-gray-1 md:px-10 md:py-10 md:shadow-lg lg:px-12 lg:pb-12 lg:pt-6"
+      >
+        <div class="flex flex-col gap-4 lg:flex-row-reverse lg:items-center">
+          <!-- Main card info -->
+          <div class="py-0 lg:w-3/5 lg:py-8">
+            <Image
+              class:list="w-full h-full rounded-md lg:rounded-3xl border-primary border border-opacity-5"
+              src={Dime}
+              alt="Dime"
+              transition:name="Dime"
+              loading="eager"
+            />
+          </div>
+          <div class="flex flex-col lg:w-2/5">
+            <div class="flex flex-col">
+              <a
+                target="_blank"
+                href="https://dime-mu.vercel.app/"
+                class="flex w-fit items-center text-xl font-bold text-primary hover:underline lg:text-2xl"
+              >
+                <h1 class="pr-1">Dime</h1>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="lucide lucide-arrow-up-right"
+                >
+                  <>
+                    <path d="M7 7h10v10"></path>
+                    <path d="M7 17 17 7"></path>
+                  </>
+                </svg>
+              </a>
+              <p class="mt-2 text-sm text-gray-400 lg:text-base">
+                Budgeting app helps users manage their finances effortlessly.
+                Track spending, set goals, and get personalized financial tips
+                from an AI assistant to improve money management skills.
+              </p>
+            </div>
+            <div class="mt-3 flex flex-wrap gap-1 lg:mt-4 lg:gap-2">
+              <span
+                class="rounded-full bg-primary bg-opacity-15 px-3 py-1 text-xs text-primary lg:text-sm"
+              >
+                Nextj.js
+              </span>
+              <span
+                class="rounded-full bg-primary bg-opacity-15 px-3 py-1 text-xs text-primary lg:text-sm"
+              >
+                Clerk.js
+              </span>
+              <span
+                class="rounded-full bg-primary bg-opacity-15 px-3 py-1 text-xs text-primary lg:text-sm"
+              >
+                Drizzle ORM
+              </span>
+              <span
+                class="rounded-full bg-primary bg-opacity-15 px-3 py-1 text-xs text-primary lg:text-sm"
+              >
+                PostgreSQL
+              </span>
+              <span
+                class="rounded-full bg-primary bg-opacity-15 px-3 py-1 text-xs text-primary lg:text-sm"
+              >
+                OpenAI
+              </span>
+              <span
+                class="rounded-full bg-primary bg-opacity-15 px-3 py-1 text-xs text-primary lg:text-sm"
+              >
+                Tailwind CSS
+              </span>
+              <span
+                class="rounded-full bg-primary bg-opacity-15 px-3 py-1 text-xs text-primary lg:text-sm"
+              >
+                shadcn/ui
+              </span>
+            </div>
+            {/* Buttons */}
+            <div class="mt-6 flex gap-3 text-primary es:flex-col">
+              <a
+                target="_blank"
+                href="https://dime-mu.vercel.app/"
+                class="flex w-fit items-center justify-center gap-2 rounded-full border px-2 py-2 text-sm text-primary hover:bg-gray-700 es:w-full md:px-4"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="lucide lucide-link-2"
+                >
+                  <>
+                    <path d="M9 17H7A5 5 0 0 1 7 7h2"></path>
+                    <path d="M15 7h2a5 5 0 1 1 0 10h-2"></path>
+                    <line x1="8" x2="16" y1="12" y2="12"></line>
+                  </>
+                </svg>
+                Visit Website
+              </a>
+              <a
+                target="_blank"
+                href="https://github.com/tkzero789/dime"
+                class="flex w-fit items-center justify-center gap-2 rounded-full border bg-white px-2 py-2 text-sm text-secondary hover:bg-slate-200 es:w-full md:px-4"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="lucide lucide-github"
+                  ><path
+                    d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"
+                  ></path><path d="M9 18c-4.51 2-5-2-7-2"></path></svg
+                >
+                Github
+              </a>
+            </div>
+          </div>
+        </div>
+        <!-- Key features -->
+        <div
+          class="mt-6 flex w-full flex-col gap-4 text-primary lg:mt-3 lg:w-9/12"
+        >
+          <h2 class="text-lg font-bold">Key Features:</h2>
+          <div class="grid grid-cols-1 gap-y-4 md:grid-cols-2">
+            <!-- Feature item -->
+            <div class="flex gap-2">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-circle-dollar-sign"
+                ><circle cx="12" cy="12" r="10"></circle><path
+                  d="M16 8h-6a2 2 0 1 0 0 4h4a2 2 0 1 1 0 4H8"></path><path
+                  d="M12 18V6"></path></svg
+              >
+              <div>
+                <h3 class="font-semibold">Financial Tracking</h3>
+                <p class="text-sm text-gray-400">
+                  Track spending, income, and savings
+                </p>
+              </div>
+            </div>
+            <!-- Feature item -->
+            <div class="flex gap-2">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-banknote"
+                ><rect width="20" height="12" x="2" y="6" rx="2"></rect><circle
+                  cx="12"
+                  cy="12"
+                  r="2"></circle><path d="M6 12h.01M18 12h.01"></path></svg
+              >
+              <div>
+                <h3 class="font-semibold">Multiple Budgets</h3>
+                <p class="text-sm text-gray-400">
+                  Manage multiple budgets with shared categories
+                </p>
+              </div>
+            </div>
+            <!-- Feature item -->
+            <div class="flex gap-2">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-bot-message-square"
+                ><path d="M12 6V2H8"></path><path
+                  d="m8 18-4 4V8a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2Z"
+                ></path><path d="M2 12h2"></path><path d="M9 11v2"></path><path
+                  d="M15 11v2"></path><path d="M20 12h2"></path></svg
+              >
+              <div>
+                <h3 class="font-semibold">AI Assistant</h3>
+                <p class="text-sm text-gray-400">
+                  Get personalized financial advice
+                </p>
+              </div>
+            </div>
+            <!-- Feature item -->
+            <div class="flex gap-2">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-panels-top-left"
+                ><rect width="18" height="18" x="3" y="3" rx="2"></rect><path
+                  d="M3 9h18"></path><path d="M9 21V9"></path></svg
+              >
+              <div>
+                <h3 class="font-semibold">Holistic View</h3>
+                <p class="text-sm text-gray-400">
+                  See all budgets in one place for easy management
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- About -->
+        <div class="mt-8 flex flex-col gap-4 text-primary">
+          <h2 class="text-lg font-bold">About:</h2>
+          <p class="text-sm font-light lg:text-base">
+            This budgeting app helps users manage multiple budgets with shared
+            categories while tracking spending, income, and savings. With a
+            built-in AI assistant offering personalized financial advice, users
+            can get a clear view of their finances and make informed decisions
+            with ease.
+          </p>
+          <ul
+            class="flex list-inside list-disc flex-col gap-2 pl-0 text-sm font-light md:pl-8 lg:text-base"
+          >
+            <li>
+              <span class="font-semibold">Budgets:</span> users can create and manage
+              multiple budgets with shared categories.
+            </li>
+            <li>
+              <span class="font-semibold">Transactions:</span> sort, search, and
+              track spending, income, and savings effortlessly.
+            </li>
+            <li>
+              <span class="font-semibold">AI Assistant:</span> get personalized financial
+              advice to optimize budgeting and spending decisions.
+            </li>
+          </ul>
+        </div>
+        <!-- Techstack -->
+        <div class="mt-8 flex flex-col gap-4 text-primary">
+          <h2 class="text-lg font-bold">Techstack:</h2>
+          <p class="text-sm font-light lg:text-base">
+            Here's an overview of the key technologies powering my project:
+          </p>
+          <ul
+            class="flex list-inside list-disc flex-col gap-2 pl-0 text-sm font-light md:pl-8 lg:text-base"
+          >
+            <li>
+              <span class="font-semibold">Corestack</span>: Next.js.
+            </li>
+            <li>
+              <span class="font-semibold">Styling</span>: Tailwind CSS,
+              shadcn/ui, Framer Motion.
+            </li>
+            <li>
+              <span class="font-semibold">Authentication</span>: Clerk.js.
+            </li>
+            <li>
+              <span class="font-semibold">Cloud Services and APIs</span>:
+              Drizzle ORM, Neon (PostgreSQL), OpenAI API.
+            </li>
+          </ul>
+        </div>
+        <!-- App Screenshots -->
+        <div class="mt-8 flex flex-col gap-4 text-primary">
+          <h2 class="text-lg font-bold">App Screenshots:</h2>
+          <div class="grid grid-cols-1 gap-8 lg:grid-cols-2">
+            <Image
+              src={DimeDashboard}
+              alt="Dime Dashboard"
+              class="rounded-3xl"
+              loading="lazy"
+            />
+            <Image
+              src={DimeBudgets}
+              alt="Dime Budgets"
+              class="rounded-3xl"
+              loading="lazy"
+            />
+            <Image
+              src={DimeSpending}
+              alt="Dime Spending"
+              class="rounded-3xl"
+              loading="lazy"
+            />
+            <Image
+              src={DimeTransaction}
+              alt="Dime Transaction"
+              class="rounded-3xl"
+              loading="lazy"
+            />
+            <Image
+              src={DimeIncome}
+              alt="Dime Income"
+              class="rounded-3xl"
+              loading="lazy"
+            />
+            <Image
+              src={DimePenny}
+              alt="Dime Penny"
+              class="rounded-3xl"
+              loading="lazy"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <style>
+    .fade-in {
+      animation: fadeIn 0.3s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+  </style>
+</Layout>

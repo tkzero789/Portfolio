@@ -1,13 +1,11 @@
 ---
 import { Image } from "astro:assets";
 import Layout from "../../layouts/Layout.astro";
-import Header from "../../components/Header.astro";
 import ContactAvatar from "../../assets/images/Avatar/my-avatar-2.gif";
 ---
 
 <Layout title="Contact">
   <main transition:persist>
-    <Header />
     <section class="h-screen">
       <div
         class="mx-auto flex h-full max-w-screen-xl flex-col items-center justify-center px-6 lg:mb-0 lg:mt-0"
@@ -54,8 +52,8 @@ import ContactAvatar from "../../assets/images/Avatar/my-avatar-2.gif";
               <Image
                 class="circle-clip h-full w-[128px] bg-white es:w-[96px] lg:w-[160px]"
                 src={ContactAvatar}
-                alt="contact-avatar"
-                loading="lazy"
+                alt="contact avatar"
+                loading="eager"
               />
             </div>
           </div>
