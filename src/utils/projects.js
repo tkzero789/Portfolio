@@ -7,7 +7,7 @@ const data = [
     name: "Dime",
     type: "Website",
     href: "/projects/dime",
-    url: "https://dime-mu.vercel.app/",
+    url: "https://www.dimebudget.com/",
     github: "https://github.com/tkzero789/dime",
     image: Dime,
     slug: "dime",
