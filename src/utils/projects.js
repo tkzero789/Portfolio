@@ -28,7 +28,7 @@ const data = [
     type: "Website",
     url: "https://bayside-hospital.onrender.com/home",
     href: "/projects/bayside",
-    github: "https://github.com/tkzero789/Hospital",
+    github: "https://github.com/tkzero789/bayside",
     image: BaySide,
     slug: "bayside-hospital",
     description:
