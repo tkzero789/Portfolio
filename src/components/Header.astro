@@ -1,5 +1,18 @@
 ---
-
+const options = [
+  {
+    title: "Home",
+    href: "/",
+  },
+  {
+    title: "Projects",
+    href: "/projects",
+  },
+  {
+    title: "Contact",
+    href: "/contact",
+  },
+];
 ---
 
 <nav
@@ -9,33 +22,18 @@
     id="scroll-header"
     class="flex items-center justify-center rounded-full border px-3 backdrop-blur-xl transition duration-500 ease-in-out"
   >
-    <li
-      class="z-10 rounded-full px-1 py-2 transition duration-100 ease-in-out es:py-1 md:px-2 lg:hover:text-slate-200"
-    >
-      <a
-        href="/"
-        class="scroll-item inline-block cursor-pointer px-3 py-1 text-primary transition-all hover:rounded-full hover:bg-transparent hover:bg-opacity-50 es:p-1 lg:hover:bg-white lg:hover:text-secondary"
-        >Home</a
-      >
-    </li>
-    <li
-      class="z-10 rounded-full px-1 py-2 transition duration-100 ease-in-out es:py-0 md:px-2 lg:hover:text-slate-200"
-    >
-      <a
-        href="/projects"
-        class="scroll-item inline-block cursor-pointer px-3 py-1 text-primary transition-all hover:rounded-full hover:bg-transparent hover:bg-opacity-50 es:p-1 lg:hover:bg-white lg:hover:text-secondary"
-        >Projects</a
-      >
-    </li>
-    <li
-      class="z-10 rounded-full px-1 py-2 transition duration-100 ease-in-out es:py-0 md:px-2 lg:hover:text-slate-200"
-    >
-      <a
-        href="/contact"
-        class="scroll-item inline-block cursor-pointer px-3 py-1 text-primary transition-all hover:rounded-full hover:bg-transparent hover:bg-opacity-50 es:p-1 lg:hover:bg-white lg:hover:text-secondary"
-        >Contact</a
-      >
-    </li>
+    {
+      options.map((item) => (
+        <li class="z-10 rounded-full px-1 py-2 transition duration-100 ease-in-out es:py-1 md:px-2 lg:hover:text-slate-200">
+          <a
+            href={item.href}
+            class="scroll-item inline-block cursor-pointer px-3 py-1 text-primary transition-all hover:rounded-full hover:bg-transparent hover:bg-opacity-50 es:p-1 lg:hover:bg-white lg:hover:text-secondary"
+          >
+            {item.title}
+          </a>
+        </li>
+      ))
+    }
   </ul>
   <script>
     import "../utils/navScroll";
