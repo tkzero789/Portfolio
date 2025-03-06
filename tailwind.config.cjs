@@ -23,7 +23,7 @@ module.exports = {
         "card-base": "var(--card-base)",
         "card-dark": "var(--card-dark)",
         badge: "var(--badge)",
-        "blur-base": "var(--blur-base)",
+        "navigation-background": "var(--navigation-background)",
         "primary-btn-hover": "var(--primary-btn-hover)",
         "outline-btn-hover": "var(--outline-btn-hover)",
       },
