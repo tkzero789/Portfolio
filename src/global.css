@@ -1,0 +1,15 @@
+:root {
+  --background: hsl(60, 4%, 15%);
+  --border: hsl(60, 4%, 24%);
+  --primary: hsl(216, 12%, 96%);
+  --primary-text: hsl(216, 12%, 84%);
+  --body-text: hsl(216, 12%, 80%);
+  --dark-text: hsl(60, 2%, 15%);
+  --card-base: hsl(60, 2%, 22%);
+  --card-dark: hsl(60, 2%, 18%);
+  --badge: hsl(60, 2%, 26%);
+  --blur-base: hsla(45, 17%, 95%, 0.6);
+
+  --primary-btn-hover: hsl(216, 12%, 88%);
+  --outline-btn-hover: hsl(216, 12%, 18%);
+}

@@ -10,6 +10,7 @@ import "@fontsource/poppins/600.css";
 import "@fontsource/poppins/700.css";
 import "@fontsource/poppins/800.css";
 import "@fontsource/poppins/900.css";
+import "../global.css";
 import Header from "../components/Header.astro";
 ---
 
@@ -46,6 +47,7 @@ import Header from "../components/Header.astro";
   </head>
   <body>
     <Header />
+
     <slot />
     <style is:global>
       * {
@@ -58,7 +60,8 @@ import Header from "../components/Header.astro";
       }
       body {
         font-family: "Poppins", sans-serif;
-        background-color: #272724;
+        color: var(--primary-text);
+        background-color: var(--background);
         overflow-x: hidden;
       }
       ::-webkit-scrollbar {

@@ -11,7 +11,7 @@ import PocketSkyRain from "../../../assets/images/PocketSky/pocketsky-screenshot
     <div class="mx-auto max-w-screen-xl px-6 pt-28">
       <!-- Breadcrumb -->
       <nav aria-label="breadcrumb">
-        <ul class="flex items-center gap-2 text-sm text-primary">
+        <ul class="flex items-center gap-2 text-sm">
           <li>
             <a href="/">
               <svg
@@ -67,13 +67,13 @@ import PocketSkyRain from "../../../assets/images/PocketSky/pocketsky-screenshot
         </ul>
       </nav>
       <div
-        class="fade-in mb-20 mt-10 rounded-3xl bg-transparent px-0 py-0 md:bg-gray-1 md:px-10 md:py-10 md:shadow-lg lg:px-12 lg:pb-12 lg:pt-6"
+        class="fade-in mb-20 mt-10 rounded-3xl bg-transparent px-0 py-0 md:bg-card-dark md:px-10 md:py-10 md:shadow-lg lg:px-12 lg:pb-12 lg:pt-6"
       >
         <div class="flex flex-col gap-4 lg:flex-row-reverse lg:items-center">
           <!-- Main card info -->
           <div class="py-0 lg:w-3/5 lg:py-8">
             <Image
-              class:list="w-full h-full rounded-md lg:rounded-3xl border-primary border border-opacity-5"
+              class:list="w-full h-full rounded-md lg:rounded-3xl border-border border"
               src={PocketSky}
               alt="Pocket Sky"
               transition:name="PocketSky"
@@ -85,7 +85,7 @@ import PocketSkyRain from "../../../assets/images/PocketSky/pocketsky-screenshot
               <a
                 target="_blank"
                 href="https://www.dimebudget.com/"
-                class="flex w-fit items-center text-xl font-bold text-primary hover:underline lg:text-2xl"
+                class="flex w-fit items-center text-xl font-bold hover:underline lg:text-2xl"
               >
                 <h1 class="pr-1">PocketSky</h1>
                 <svg
@@ -106,34 +106,34 @@ import PocketSkyRain from "../../../assets/images/PocketSky/pocketsky-screenshot
                   </>
                 </svg>
               </a>
-              <p class="mt-2 text-sm text-gray-400 lg:text-base">
+              <p class="mt-2 text-sm lg:text-base">
                 A simple weather app with search features, unit conversion, and
                 essential forecast information.
               </p>
             </div>
             <div class="mt-3 flex flex-wrap gap-1 lg:mt-4 lg:gap-2">
               <span
-                class="rounded-full bg-primary bg-opacity-15 px-3 py-1 text-xs text-primary lg:text-sm"
+                class="bg-badge rounded-full bg-opacity-15 px-3 py-1 text-xs lg:text-sm"
               >
                 HTML
               </span>
               <span
-                class="rounded-full bg-primary bg-opacity-15 px-3 py-1 text-xs text-primary lg:text-sm"
+                class="bg-badge rounded-full bg-opacity-15 px-3 py-1 text-xs lg:text-sm"
               >
                 CSS
               </span>
               <span
-                class="rounded-full bg-primary bg-opacity-15 px-3 py-1 text-xs text-primary lg:text-sm"
+                class="bg-badge rounded-full bg-opacity-15 px-3 py-1 text-xs lg:text-sm"
               >
                 JavaScript
               </span>
             </div>
             {/* Buttons */}
-            <div class="mt-6 flex gap-3 text-primary es:flex-col">
+            <div class="mt-6 flex gap-3 es:flex-col">
               <a
                 target="_blank"
                 href="https://main--brilliant-klepon-275efd.netlify.app/"
-                class="flex w-fit items-center justify-center gap-2 rounded-full border bg-white px-2 py-2 text-sm text-secondary hover:bg-slate-200 es:w-full md:px-4"
+                class="flex w-fit items-center justify-center gap-2 rounded-full border bg-white px-2 py-2 text-sm hover:bg-slate-200 es:w-full md:px-4"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -158,7 +158,7 @@ import PocketSkyRain from "../../../assets/images/PocketSky/pocketsky-screenshot
               <a
                 target="_blank"
                 href="https://github.com/tkzero789/PocketSky"
-                class="flex w-fit items-center justify-center gap-2 rounded-full border px-2 py-2 text-sm text-primary hover:bg-gray-700 es:w-full md:px-4"
+                class="flex w-fit items-center justify-center gap-2 rounded-full border px-2 py-2 text-sm hover:bg-gray-700 es:w-full md:px-4"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -181,9 +181,7 @@ import PocketSkyRain from "../../../assets/images/PocketSky/pocketsky-screenshot
           </div>
         </div>
         <!-- Key features -->
-        <div
-          class="mt-6 flex w-full flex-col gap-4 text-primary lg:mt-3 lg:w-9/12"
-        >
+        <div class="mt-6 flex w-full flex-col gap-4 lg:mt-3 lg:w-9/12">
           <h2 class="text-lg font-bold">Key Features:</h2>
           <div class="grid grid-cols-1 gap-y-4 md:grid-cols-2">
             <!-- Feature item -->
@@ -207,9 +205,7 @@ import PocketSkyRain from "../../../assets/images/PocketSky/pocketsky-screenshot
               >
               <div>
                 <h3 class="font-semibold">City Search</h3>
-                <p class="text-sm text-gray-400">
-                  Quickly find weather by city name
-                </p>
+                <p class="text-sm">Quickly find weather by city name</p>
               </div>
             </div>
             <!-- Feature item -->
@@ -232,15 +228,13 @@ import PocketSkyRain from "../../../assets/images/PocketSky/pocketsky-screenshot
               >
               <div>
                 <h3 class="font-semibold">Unit Conversion</h3>
-                <p class="text-sm text-gray-400">
-                  Switch between imperial and metric units
-                </p>
+                <p class="text-sm">Switch between imperial and metric units</p>
               </div>
             </div>
           </div>
         </div>
         <!-- About -->
-        <div class="mt-8 flex flex-col gap-4 text-primary">
+        <div class="mt-8 flex flex-col gap-4">
           <h2 class="text-lg font-bold">About:</h2>
           <p class="text-sm font-light lg:text-base">
             This weather app allows users to quickly access current weather
@@ -266,7 +260,7 @@ import PocketSkyRain from "../../../assets/images/PocketSky/pocketsky-screenshot
           </ul>
         </div>
         <!-- Techstack -->
-        <div class="mt-8 flex flex-col gap-4 text-primary">
+        <div class="mt-8 flex flex-col gap-4">
           <h2 class="text-lg font-bold">Techstack:</h2>
           <p class="text-sm font-light lg:text-base">
             Here's an overview of the key technologies powering my project:
@@ -287,7 +281,7 @@ import PocketSkyRain from "../../../assets/images/PocketSky/pocketsky-screenshot
           </ul>
         </div>
         <!-- App Screenshots -->
-        <div class="mt-8 flex flex-col gap-4 text-primary">
+        <div class="mt-8 flex flex-col gap-4">
           <h2 class="text-lg font-bold">App Screenshots:</h2>
           <div class="grid grid-cols-1 gap-8 lg:grid-cols-2">
             <Image

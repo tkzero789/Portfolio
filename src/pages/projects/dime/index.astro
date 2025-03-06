@@ -15,7 +15,7 @@ import DimePenny from "../../../assets/images/Dime/dime-screenshot-penny.webp";
     <div class="mx-auto max-w-screen-xl px-6 pt-28">
       <!-- Breadcrumb -->
       <nav aria-label="breadcrumb">
-        <ul class="flex items-center gap-2 text-sm text-primary">
+        <ul class="flex items-center gap-2 text-sm">
           <li>
             <a href="/">
               <svg
@@ -71,13 +71,13 @@ import DimePenny from "../../../assets/images/Dime/dime-screenshot-penny.webp";
         </ul>
       </nav>
       <div
-        class="fade-in mb-20 mt-10 rounded-3xl bg-transparent px-0 py-0 md:bg-gray-1 md:px-10 md:py-10 md:shadow-lg lg:px-12 lg:pb-12 lg:pt-6"
+        class="fade-in mb-20 mt-10 rounded-3xl bg-transparent px-0 py-0 md:bg-card-dark md:px-10 md:py-10 md:shadow-lg lg:px-12 lg:pb-12 lg:pt-6"
       >
         <div class="flex flex-col gap-4 lg:flex-row-reverse lg:items-center">
           <!-- Main card info -->
           <div class="py-0 lg:w-3/5 lg:py-8">
             <Image
-              class:list="w-full h-full rounded-md lg:rounded-3xl border-primary border border-opacity-5"
+              class:list="w-full h-full rounded-md lg:rounded-3xl border-border border"
               src={Dime}
               alt="Dime"
               transition:name="Dime"
@@ -89,7 +89,7 @@ import DimePenny from "../../../assets/images/Dime/dime-screenshot-penny.webp";
               <a
                 target="_blank"
                 href="https://www.dimebudget.com/"
-                class="flex w-fit items-center text-xl font-bold text-primary hover:underline lg:text-2xl"
+                class="flex w-fit items-center text-xl font-bold hover:underline lg:text-2xl"
               >
                 <h1 class="pr-1">Dime</h1>
                 <svg
@@ -110,7 +110,7 @@ import DimePenny from "../../../assets/images/Dime/dime-screenshot-penny.webp";
                   </>
                 </svg>
               </a>
-              <p class="mt-2 text-sm text-gray-400 lg:text-base">
+              <p class="mt-2 text-sm lg:text-base">
                 Budgeting app helps users manage their finances effortlessly.
                 Track spending, set goals, and get personalized financial tips
                 from an AI assistant to improve money management skills.
@@ -118,47 +118,47 @@ import DimePenny from "../../../assets/images/Dime/dime-screenshot-penny.webp";
             </div>
             <div class="mt-3 flex flex-wrap gap-1 lg:mt-4 lg:gap-2">
               <span
-                class="rounded-full bg-primary bg-opacity-15 px-3 py-1 text-xs text-primary lg:text-sm"
+                class="bg-badge rounded-full bg-opacity-15 px-3 py-1 text-xs lg:text-sm"
               >
                 Nextj.js
               </span>
               <span
-                class="rounded-full bg-primary bg-opacity-15 px-3 py-1 text-xs text-primary lg:text-sm"
+                class="bg-badge rounded-full bg-opacity-15 px-3 py-1 text-xs lg:text-sm"
               >
                 Clerk.js
               </span>
               <span
-                class="rounded-full bg-primary bg-opacity-15 px-3 py-1 text-xs text-primary lg:text-sm"
+                class="bg-badge rounded-full bg-opacity-15 px-3 py-1 text-xs lg:text-sm"
               >
                 Drizzle ORM
               </span>
               <span
-                class="rounded-full bg-primary bg-opacity-15 px-3 py-1 text-xs text-primary lg:text-sm"
+                class="bg-badge rounded-full bg-opacity-15 px-3 py-1 text-xs lg:text-sm"
               >
                 PostgreSQL
               </span>
               <span
-                class="rounded-full bg-primary bg-opacity-15 px-3 py-1 text-xs text-primary lg:text-sm"
+                class="bg-badge rounded-full bg-opacity-15 px-3 py-1 text-xs lg:text-sm"
               >
                 OpenAI
               </span>
               <span
-                class="rounded-full bg-primary bg-opacity-15 px-3 py-1 text-xs text-primary lg:text-sm"
+                class="bg-badge rounded-full bg-opacity-15 px-3 py-1 text-xs lg:text-sm"
               >
                 Tailwind CSS
               </span>
               <span
-                class="rounded-full bg-primary bg-opacity-15 px-3 py-1 text-xs text-primary lg:text-sm"
+                class="bg-badge rounded-full bg-opacity-15 px-3 py-1 text-xs lg:text-sm"
               >
                 shadcn/ui
               </span>
             </div>
             {/* Buttons */}
-            <div class="mt-6 flex gap-3 text-primary es:flex-col">
+            <div class="mt-6 flex gap-3 es:flex-col">
               <a
                 target="_blank"
                 href="https://www.dimebudget.com/"
-                class="flex w-fit items-center justify-center gap-2 rounded-full border bg-white px-2 py-2 text-sm text-secondary hover:bg-slate-200 es:w-full md:px-4"
+                class="hover:bg-primary-btn-hover text-dark-text flex w-fit items-center justify-center gap-2 rounded-full border bg-primary px-2 py-2 text-sm es:w-full md:px-4"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -183,7 +183,7 @@ import DimePenny from "../../../assets/images/Dime/dime-screenshot-penny.webp";
               <a
                 target="_blank"
                 href="https://github.com/tkzero789/dime"
-                class="flex w-fit items-center justify-center gap-2 rounded-full border px-2 py-2 text-sm text-primary hover:bg-gray-700 es:w-full md:px-4"
+                class="hover:bg-outline-btn-hover flex w-fit items-center justify-center gap-2 rounded-full border px-2 py-2 text-sm es:w-full md:px-4"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -206,9 +206,7 @@ import DimePenny from "../../../assets/images/Dime/dime-screenshot-penny.webp";
           </div>
         </div>
         <!-- Key features -->
-        <div
-          class="mt-6 flex w-full flex-col gap-4 text-primary lg:mt-3 lg:w-9/12"
-        >
+        <div class="mt-6 flex w-full flex-col gap-4 lg:mt-3 lg:w-9/12">
           <h2 class="text-lg font-bold">Key Features:</h2>
           <div class="grid grid-cols-1 gap-y-4 md:grid-cols-2">
             <!-- Feature item -->
@@ -230,9 +228,7 @@ import DimePenny from "../../../assets/images/Dime/dime-screenshot-penny.webp";
               >
               <div>
                 <h3 class="font-semibold">Financial Tracking</h3>
-                <p class="text-sm text-gray-400">
-                  Track spending, income, and savings
-                </p>
+                <p class="text-sm">Track spending, income, and savings</p>
               </div>
             </div>
             <!-- Feature item -->
@@ -255,7 +251,7 @@ import DimePenny from "../../../assets/images/Dime/dime-screenshot-penny.webp";
               >
               <div>
                 <h3 class="font-semibold">Multiple Budgets</h3>
-                <p class="text-sm text-gray-400">
+                <p class="text-sm">
                   Manage multiple budgets with shared categories
                 </p>
               </div>
@@ -280,9 +276,7 @@ import DimePenny from "../../../assets/images/Dime/dime-screenshot-penny.webp";
               >
               <div>
                 <h3 class="font-semibold">AI Assistant</h3>
-                <p class="text-sm text-gray-400">
-                  Get personalized financial advice
-                </p>
+                <p class="text-sm">Get personalized financial advice</p>
               </div>
             </div>
             <!-- Feature item -->
@@ -303,7 +297,7 @@ import DimePenny from "../../../assets/images/Dime/dime-screenshot-penny.webp";
               >
               <div>
                 <h3 class="font-semibold">Holistic View</h3>
-                <p class="text-sm text-gray-400">
+                <p class="text-sm">
                   See all budgets in one place for easy management
                 </p>
               </div>
@@ -311,7 +305,7 @@ import DimePenny from "../../../assets/images/Dime/dime-screenshot-penny.webp";
           </div>
         </div>
         <!-- About -->
-        <div class="mt-8 flex flex-col gap-4 text-primary">
+        <div class="mt-8 flex flex-col gap-4">
           <h2 class="text-lg font-bold">About:</h2>
           <p class="text-sm font-light lg:text-base">
             This budgeting app helps users manage multiple budgets with shared
@@ -338,7 +332,7 @@ import DimePenny from "../../../assets/images/Dime/dime-screenshot-penny.webp";
           </ul>
         </div>
         <!-- Techstack -->
-        <div class="mt-8 flex flex-col gap-4 text-primary">
+        <div class="mt-8 flex flex-col gap-4">
           <h2 class="text-lg font-bold">Techstack:</h2>
           <p class="text-sm font-light lg:text-base">
             Here's an overview of the key technologies powering my project:
@@ -363,7 +357,7 @@ import DimePenny from "../../../assets/images/Dime/dime-screenshot-penny.webp";
           </ul>
         </div>
         <!-- App Screenshots -->
-        <div class="mt-8 flex flex-col gap-4 text-primary">
+        <div class="mt-8 flex flex-col gap-4">
           <h2 class="text-lg font-bold">App Screenshots:</h2>
           <div class="grid grid-cols-1 gap-8 lg:grid-cols-2">
             <Image

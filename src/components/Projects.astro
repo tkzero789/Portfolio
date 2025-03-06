@@ -27,7 +27,7 @@ const data = getData();
                 data-aos-duration="800"
               >
                 <div
-                  class={`group flex flex-col rounded-3xl ${index !== 0 ? "mt-auto lg:mt-0" : ""} h-fit bg-gray-1 p-6 shadow-lg transition-bg duration-500 hover:bg-gray-2 md:p-10 lg:p-6`}
+                  class={`group flex flex-col rounded-3xl ${index !== 0 ? "mt-auto lg:mt-0" : ""} h-fit bg-card-dark p-6 shadow-lg transition-bg duration-500 hover:bg-card-base md:p-10 lg:p-6`}
                 >
                   {/* Image */}
                   <div class="h-full w-full lg:h-1/2">
@@ -43,21 +43,21 @@ const data = getData();
                   <div class="pt-4 lg:block lg:h-auto lg:w-full lg:rounded-b-xl lg:rounded-t-none lg:pt-6">
                     <div class="flex h-full flex-row-reverse justify-end px-0">
                       <div>
-                        <h1 class="text-lg font-bold text-white es:text-base es:font-semibold lg:text-xl">
+                        <h1 class="text-lg font-bold es:text-base es:font-semibold lg:text-xl">
                           {item.name}
                         </h1>
-                        <p class="text-sm text-white text-opacity-80 es:text-xs">
+                        <p class="text-sm text-opacity-80 es:text-xs">
                           {item.type}
                         </p>
                       </div>
                     </div>
                   </div>
                   {/* Visit and Detail Buttons */}
-                  <div class="mt-5 flex gap-3 text-primary">
+                  <div class="mt-5 flex gap-3">
                     <a
                       target="_blank"
                       href={item.url}
-                      class="item-center flex w-fit gap-2 rounded-full border bg-white px-4 py-2 text-secondary hover:bg-slate-200"
+                      class="item-center hover:bg-primary-btn-hover text-dark-text flex w-fit gap-2 rounded-full border bg-primary px-4 py-2"
                     >
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -81,7 +81,7 @@ const data = getData();
                     </a>
                     <a
                       href={item.href}
-                      class="item-center flex w-fit gap-2 rounded-full border px-4 py-2 text-primary hover:bg-gray-700"
+                      class="item-center hover:bg-outline-btn-hover flex w-fit gap-2 rounded-full border px-4 py-2"
                     >
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -119,7 +119,7 @@ const data = getData();
     >
       <a
         href="/projects"
-        class="inline-block cursor-pointer rounded-full border px-5 py-3 text-primary hover:bg-gray-700 es:py-2"
+        class="hover:bg-outline-btn-hover inline-block cursor-pointer rounded-full border px-5 py-3 es:py-2"
         >View all</a
       >
     </div>

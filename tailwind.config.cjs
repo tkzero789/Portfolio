@@ -12,12 +12,20 @@ module.exports = {
       transitionProperty: {
         bg: "background-color",
       },
+      borderColor: {
+        border: "var(--border)",
+      },
       colors: {
-        primary: "#d1d5db",
-        secondary: "#272724",
-        "blur-header": "hsla(45, 17%, 95%, 0.6)",
-        "gray-1": "hsl(60 4% 18% / 1)",
-        "gray-2": "hsl(60 4% 22% / 1)",
+        primary: "var(--primary)",
+        "primary-text": "var(--primary-text)",
+        "body-text": "var(--body-text)",
+        "dark-text": "var(--dark-text)",
+        "card-base": "var(--card-base)",
+        "card-dark": "var(--card-dark)",
+        badge: "var(--badge)",
+        "blur-base": "var(--blur-base)",
+        "primary-btn-hover": "var(--primary-btn-hover)",
+        "outline-btn-hover": "var(--outline-btn-hover)",
       },
       animation: {
         text: "text 5s ease infinite",

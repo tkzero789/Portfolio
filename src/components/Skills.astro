@@ -23,12 +23,12 @@ const data = getData();
             data.map((item, index) => {
               return (
                 <div
-                  class={`rounded-2xl border-2 border-primary border-opacity-25 p-4 es:p-2 lg:p-6 ${index !== 0 ? "mt-4 es:mt-2 md:mt-4 lg:mt-0" : ""}`}
+                  class={`border-border rounded-2xl border-2 p-4 es:p-2 lg:p-6 ${index !== 0 ? "mt-4 es:mt-2 md:mt-4 lg:mt-0" : ""}`}
                   data-aos="fade-up"
                   data-aos-anchor-placement="center-bottom"
                   data-aos-duration="800"
                 >
-                  <div class="flex items-center rounded-xl bg-gray-1 p-2 text-primary es:p-1 lg:p-3">
+                  <div class="flex items-center rounded-xl bg-card-dark p-2 es:p-1 lg:p-3">
                     {/* Front-end icon */}
                     {index === 0 && (
                       <svg
@@ -80,13 +80,13 @@ const data = getData();
                         />
                       </svg>
                     )}
-                    <h1 class="pl-2 text-lg font-medium text-primary es:text-sm es:font-normal lg:text-xl lg:font-semibold">
+                    <h1 class="pl-2 text-lg font-medium es:text-sm es:font-normal lg:text-xl lg:font-semibold">
                       {item.heading}
                     </h1>
                   </div>
                   <div class="grid grid-cols-2 gap-1 pt-2 text-center es:gap-1 es:pt-1 lg:gap-2 lg:pt-4">
                     {item.tech.map((i) => (
-                      <span class="rounded-md bg-primary bg-opacity-15 p-1 text-primary es:px-0 es:py-0 es:text-xs es:font-normal lg:text-base lg:font-semibold">
+                      <span class="rounded-md bg-card-base bg-opacity-15 p-1 es:px-0 es:py-0 es:text-xs es:font-normal lg:text-base lg:font-semibold">
                         {i}
                       </span>
                     ))}
