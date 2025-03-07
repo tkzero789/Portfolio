@@ -20,7 +20,7 @@ export default function Navigation({ currentPath }) {
   const pathList = ["/", "/projects", "/contact"];
   return (
     <nav className="fixed left-0 right-0 top-0 z-50 mx-auto mt-8 flex w-fit justify-center">
-      <ul className="bg-navigation-background flex items-center justify-center rounded-full px-3 backdrop-blur-xl transition duration-500">
+      <ul className="flex items-center justify-center rounded-full px-3 backdrop-blur-xl transition duration-500">
         {options.map((item) => (
           <li
             key={item.title}
